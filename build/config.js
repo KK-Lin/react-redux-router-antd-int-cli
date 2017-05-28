@@ -24,5 +24,6 @@ module.exports = {
     port: 3001,
     src: resolve(__dirname, "../src"),
     dist: resolve(__dirname, '../dist'),
+    template: resolve(__dirname, "../template"),
     public: '/'
 }

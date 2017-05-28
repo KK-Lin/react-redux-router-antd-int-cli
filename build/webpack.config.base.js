@@ -18,7 +18,9 @@ module.exports = {
     },
     resolve: {
         alias: {
-            "@": config.src
+            "@": config.src,
+            "@image": resolve(config.src, './assets/image'),
+            "@style": resolve(config.src, './assets/style')
         }
     },
 
@@ -40,7 +42,8 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             inject: "body",
-            title: "react hot server"
+            title: "react hot server",
+            template: resolve(config.template, "./index.html")
         })
     ]
 }
