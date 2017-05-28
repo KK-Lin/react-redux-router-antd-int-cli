@@ -5,6 +5,9 @@ const config = require("./config");
 
 
 module.exports = merge(base, {
+    output: {
+        filename: "js/[name].[hash].js"
+    },
     devServer: {
         hot: true,
         host: config.host,

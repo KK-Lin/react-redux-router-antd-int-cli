@@ -11,6 +11,9 @@ const extractText = new ExtractTextPlugin({
 });
 
 module.exports = merge(base, {
+    output: {
+        filename: "js/[name].[chunkhash].js"
+    },
     module: {
         rules: [
             {

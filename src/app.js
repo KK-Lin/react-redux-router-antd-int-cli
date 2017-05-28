@@ -13,7 +13,7 @@ if (module.hot) module.hot.accept(render);
 function render() {
   ReactDOM.render(
     <AppContainer>
-      <div>
+      <div>1111111
         <img src={ require('@/assets/images/hot.png') } />
       </div>
     </AppContainer>, getRoot());

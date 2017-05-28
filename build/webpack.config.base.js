@@ -14,8 +14,7 @@ module.exports = {
     },
     output: {
         path: config.dist,
-        publicPath: config.public,
-        filename: "js/[name].[chunkhash].js"
+        publicPath: config.public
     },
     resolve: {
         alias: {
@@ -35,7 +34,7 @@ module.exports = {
             }
         }, {
             test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
-            loader: 'url-loader?limit=100&name=/static/[name].[ext]'
+            loader: 'url-loader?limit=100&name=static/[name].[ext]'
         }]
     },
     plugins: [
