@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader'
-
+import Router from './router'
 import '@style/index.less'
 
 
@@ -15,9 +15,7 @@ if (module.hot) module.hot.accept(render);
 function render() {
 	ReactDOM.render(
 		<AppContainer>
-    <div>1111111
-      <img src={ require('@image/hot.png') } />
-    </div>
+    <Router></Router>
   </AppContainer>, getRoot());
 }
 
@@ -35,7 +33,7 @@ function getRoot() {
 	let root = document.getElementById("root");
 	if (root) return root;
 	root = document.createElement("div");
-	root.id = "root";
+	root.id = "app";
 	document.body.appendChild(root);
 	return root;
 }

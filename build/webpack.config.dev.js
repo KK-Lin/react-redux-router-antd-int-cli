@@ -16,6 +16,7 @@ module.exports = merge(base, {
         publicPath: config.public,
         noInfo: true
     },
+    devtool: "source-map",
     module: {
         rules: [{
             test: /\.(less|css)$/,

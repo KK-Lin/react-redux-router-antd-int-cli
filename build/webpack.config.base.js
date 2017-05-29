@@ -9,7 +9,7 @@ module.exports = {
         app: [
             "react-hot-loader/patch",
             `webpack-dev-server/client?http://${config.host}:${config.port}`,
-            resolve(config.src, './app.js')
+            resolve(config.src, './app.jsx')
         ]
     },
     output: {
@@ -21,12 +21,13 @@ module.exports = {
             "@": config.src,
             "@image": resolve(config.src, './assets/image'),
             "@style": resolve(config.src, './assets/style')
-        }
+        },
+        extensions: ['.jsx', '.js', '.json']
     },
 
     module: {
         rules: [{
-            test: /\.js$/,
+            test: /\.(js|jsx)$/,
             exclude: /(node_modules|bower_components)/,
             use: {
                 loader: 'babel-loader',
