@@ -4,7 +4,6 @@ import { AppContainer } from 'react-hot-loader'
 import Router from './router'
 import '@style/index.less'
 
-
 // Hot Module Replacement API`
 preRender();
 render();

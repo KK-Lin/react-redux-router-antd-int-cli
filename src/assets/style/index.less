@@ -1,5 +1,15 @@
 @import '~@style/same.less';
 
-p{
-    color: burlywood;
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html,body,:global(#app){
+    height: 100%;
+}
+
+:global(.app-router){
+    background-color: @background;
+    min-height: 100%;
 }
