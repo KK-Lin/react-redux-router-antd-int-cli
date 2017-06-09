@@ -6,7 +6,6 @@ import '@style/index.less'
 
 
 // Hot Module Replacement API`
-
 preRender();
 render();
 if (module.hot) module.hot.accept(render);
@@ -15,7 +14,7 @@ if (module.hot) module.hot.accept(render);
 function render() {
 	ReactDOM.render(
 		<AppContainer>
-    <Router></Router>
+    <Router/>
   </AppContainer>, getRoot());
 }
 
@@ -30,10 +29,11 @@ function setBaseFontSize() {
 
 
 function getRoot() {
-	let root = document.getElementById("root");
+	let id = "app";
+	let root = document.getElementById(id);
 	if (root) return root;
 	root = document.createElement("div");
-	root.id = "app";
+	root.id = id;
 	document.body.appendChild(root);
 	return root;
 }

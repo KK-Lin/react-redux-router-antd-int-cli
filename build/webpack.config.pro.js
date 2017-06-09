@@ -20,7 +20,7 @@ module.exports = merge(base, {
                 test: /\.(less|css)$/,
                 use: extractText.extract({
                     fallback: 'style-loader',
-                    use: ['css-loader', 'less-loader']
+                    use: ['css-loader?modules&localIdentName=[name]-[local]-[hash:5]', 'less-loader']
                 })
             }
         ]

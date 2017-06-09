@@ -14,13 +14,14 @@ module.exports = merge(base, {
         port: config.port,
         contentBase: config.dist,
         publicPath: config.public,
-        noInfo: true
+        noInfo: true,
+        historyApiFallback: true
     },
     devtool: "source-map",
     module: {
         rules: [{
             test: /\.(less|css)$/,
-            loader: 'style-loader!css-loader!less-loader'
+            loader: 'style-loader!css-loader?modules&localIdentName=[name]-[local]-[hash:5]!less-loader'
         }]
     },
     plugins: [

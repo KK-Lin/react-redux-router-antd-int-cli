@@ -20,7 +20,9 @@ module.exports = {
         alias: {
             "@": config.src,
             "@image": resolve(config.src, './assets/image'),
-            "@style": resolve(config.src, './assets/style')
+            "@style": resolve(config.src, './assets/style'),
+            "@components": resolve(config.src, './components'),
+            "@views": resolve(config.src, './views')
         },
         extensions: ['.jsx', '.js', '.json']
     },
