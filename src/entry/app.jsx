@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
+import { Provider } from 'react-redux'
+import { createStore } from 'redux';
+import reducers from '@reducers/index.jsx';
 import Router from '@/router/index.jsx';
 import beforeRender from '@entry/beforeRender';
 import '@style/index.less';
 
 beforeRender();
 // Hot Module Replacement API`
-
+let store = createStore(reducers);
 render();
 if (module.hot) module.hot.accept(render);
 
@@ -15,9 +18,10 @@ if (module.hot) module.hot.accept(render);
 function render() {
 	ReactDOM.render(
 		<AppContainer>
-    <Router/>
+    <Provider store={ store }>
+      <Router/>
+    </Provider>
   </AppContainer>, getRoot());
-
 }
 
 

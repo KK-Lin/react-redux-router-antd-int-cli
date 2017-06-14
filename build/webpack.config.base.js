@@ -24,7 +24,8 @@ module.exports = {
             "@components": resolve(config.src, './components'),
             "@containers": resolve(config.src, './containers'),
             "@views": resolve(config.src, './views'),
-            "@entry": resolve(config.src, './entry')
+            "@entry": resolve(config.src, './entry'),
+            "@reducers": resolve(config.src, './reducers')
         },
         extensions: ['.jsx', '.js', '.json']
     },
