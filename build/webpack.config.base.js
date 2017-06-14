@@ -1,5 +1,5 @@
 const webpack = require("webpack");
-const {resolve} = require("path");
+const { resolve } = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = require("./config");
@@ -9,7 +9,7 @@ module.exports = {
         app: [
             "react-hot-loader/patch",
             `webpack-dev-server/client?http://${config.host}:${config.port}`,
-            resolve(config.src, './app.jsx')
+            resolve(config.src, './entry/app.jsx')
         ]
     },
     output: {
@@ -22,7 +22,9 @@ module.exports = {
             "@image": resolve(config.src, './assets/image'),
             "@style": resolve(config.src, './assets/style'),
             "@components": resolve(config.src, './components'),
-            "@views": resolve(config.src, './views')
+            "@containers": resolve(config.src, './containers'),
+            "@views": resolve(config.src, './views'),
+            "@entry": resolve(config.src, './entry')
         },
         extensions: ['.jsx', '.js', '.json']
     },
