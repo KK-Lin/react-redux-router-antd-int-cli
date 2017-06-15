@@ -25,7 +25,7 @@ module.exports = {
             "@containers": resolve(config.src, './containers'),
             "@views": resolve(config.src, './views'),
             "@entry": resolve(config.src, './entry'),
-            "@reducers": resolve(config.src, './reducers')
+            "@store": resolve(config.src, './store')
         },
         extensions: ['.jsx', '.js', '.json']
     },
@@ -37,7 +37,8 @@ module.exports = {
             use: {
                 loader: 'babel-loader',
                 options: {
-                    presets: ['env', 'react']
+                    presets: ['env', 'react'],
+                    plugins: ["transform-decorators-legacy"]
                 }
             }
         }, {
