@@ -1,3 +1,15 @@
-html {
-    font-size: 30px;
+@import '~@style/color.less';
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html,body,:global(#app){
+    height: 100%;
+}
+
+:global(.app-router){
+    background-color: @background;
+    height: 100%;
 }
