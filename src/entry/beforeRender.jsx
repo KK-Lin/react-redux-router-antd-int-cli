@@ -3,6 +3,6 @@ function setBaseFontSize() {
     html.style.fontSize = (html.offsetWidth / 750) * 100 + "px";
 }
 
-export default function preRender() {
+export default function beforeRender() {
     setBaseFontSize();
 }

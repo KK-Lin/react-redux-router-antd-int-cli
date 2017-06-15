@@ -31,6 +31,4 @@ module.exports = merge(base, {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NamedModulesPlugin()
     ]
-
-
 });
