@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import { store } from '@store/index.jsx';
 import Router from '@/router/index.jsx';
 import beforeRender from '@entry/beforeRender';
+import 'antd/dist/antd.less';
 import '@style/index.less';
 
 beforeRender();
